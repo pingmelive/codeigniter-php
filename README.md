@@ -12,7 +12,33 @@ Easy right!.
 [https://pingmelive.com](https://pingmelive.com) **and get your `API KEY`**.
 
 
-### Usage
+### Integration
+1. Copy pingMeLive Library File (**PingMeLive.php**) in {BASEROOT}/system/libraries
+
+
+2. Autoload the PingMeLive Library in {BASEROOT}/application/config/autoload.php
+
+
+```php 
+<?php 
+$autoload['libraries'] = array('pingmelive');
+?>
+```
+
+
+3. Define the Crendentials in Constant in {BASEROOT}/application/config/constant.php
+
+
+```php 
+<?php 
+// Copy the code below and simply paste in the constant.php 
+$pingmeliveConf = array("apiKey" =>"Your API KEY","projectID" =>"PROJECT ID","errorLogStatus"=>true,"errorTitle"=>"CodeIgnitor PHP Error");
+
+defined('PingMeLiveConfig') OR define('PingMeLiveConfig', $pingmeliveConf);
+
+?>
+```
+4. Thats it. Integration Completed.
 
 Include pingMeLive Library
 
