@@ -13,10 +13,10 @@ Easy right!.
 
 
 ### Integration
-* 1. Copy pingMeLive Library File (**PingMeLive.php**) in {BASEROOT}/system/libraries
+* **Step 1**  Copy PingMeLive Library File (**PingMeLive.php**) in `{BASEROOT}/system/libraries`
 
 
-* 2. Autoload the PingMeLive Library in {BASEROOT}/application/config/autoload.php
+* **Step 2** Autoload the PingMeLive Library in `{BASEROOT}/application/config/autoload.php`
 
 
 ```php 
@@ -26,7 +26,7 @@ $autoload['libraries'] = array('pingmelive');
 ```
 
 
-* 3. Define the Crendentials in Constant in {BASEROOT}/application/config/constant.php
+* **Step 3** Define the Crendentials in Constant in `{BASEROOT}/application/config/constant.php`
 
 
 ```php 
