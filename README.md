@@ -13,10 +13,10 @@ Easy right!.
 
 
 ### Integration
-1. Copy pingMeLive Library File (**PingMeLive.php**) in {BASEROOT}/system/libraries
+* 1. Copy pingMeLive Library File (**PingMeLive.php**) in {BASEROOT}/system/libraries
 
 
-2. Autoload the PingMeLive Library in {BASEROOT}/application/config/autoload.php
+* 2. Autoload the PingMeLive Library in {BASEROOT}/application/config/autoload.php
 
 
 ```php 
@@ -26,7 +26,7 @@ $autoload['libraries'] = array('pingmelive');
 ```
 
 
-3. Define the Crendentials in Constant in {BASEROOT}/application/config/constant.php
+* 3. Define the Crendentials in Constant in {BASEROOT}/application/config/constant.php
 
 
 ```php 
@@ -38,39 +38,31 @@ defined('PingMeLiveConfig') OR define('PingMeLiveConfig', $pingmeliveConf);
 
 ?>
 ```
-4. Thats it. Integration Completed.
 
-Include pingMeLive Library
-
-`Note` **Its Extra light(<3KB).**
-
-```php
-<?php
-require_once("pingMeLive.lib.php");
-$pingmelive = new pingMeLive("apiKey","projectID","errorStatus(true/false)","errorName"); 
-?>
-
-```
 ...and you are done!
+
 
 ## Custom Events
 
 You can also use pingMeLive for sending custom events.
 
 ### 1.Simple event
+
 ```php
 <?php 
 //To trigger Simple Event, Just call the below function.
-$pingMeLive->simpleEvent("groupTitle","eventMessage");
+$this->pingmelive->simpleEvent("groupTitle","eventMessage");
 ?>
  ```    
 
 If you want to send some detailed long description you can use `Detailed event`
+
 ### 2.Detailed event
+
 ```php
 <?php 
 //To trigger Detailed Event, Just call the below function.
-$pingMeLive->detailedEvent("groupTitle","eventMessage","detailDescription");
+$this->pingmelive->detailedEvent("groupTitle","eventMessage","detailDescription");
 ?>
 ```
 
