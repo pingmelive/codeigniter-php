@@ -53,18 +53,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @lastModified		08-OCT, 2019 2:05 PM
  */
 class CI_PingMeLive {
-	public function __construct()
-    {
-        $this->apiKey         = PingMeLiveConfig['apiKey'];
-        $this->projectID      = PingMeLiveConfig['projectID'];
-        $this->errorLogStatus = PingMeLiveConfig['errorLogStatus'];
-        $this->errorTitle     = PingMeLiveConfig['errorTitle'];
+public function __construct()
+   {
+	$PingMeLiveConfig=json_decode(PingMeLiveConfig,true);
+        $this->apiKey         = $PingMeLiveConfig['apiKey'];
+        $this->projectID      = $PingMeLiveConfig['projectID'];
+        $this->errorLogStatus = $PingMeLiveConfig['errorLogStatus'];
+        $this->errorTitle     = $PingMeLiveConfig['errorTitle'];
         $this->eventDateTime  = date('Y-m-d H:i:s');
         if ($this->errorLogStatus == true) {
             $this->startErrorPings();
         }
     }
-    public function pingError($errno, $errstr, $errfile, $errline)
+public function pingError($errno, $errstr, $errfile, $errline)
     { 
         $eventDateTime = $this->eventDateTime;
         $groupTitle    = $this->errorTitle;
@@ -82,7 +83,7 @@ class CI_PingMeLive {
         );
         $this->sendData($groupTitle, $messageText, json_encode($detailedText));
     }
-    public function sendData($groupTitle, $messageText, $detailedText = "")
+public function sendData($groupTitle, $messageText, $detailedText = "")
     {
         $eventDateTime = $this->eventDateTime;
         $url           = "https://pingmelive.com/event/push";
@@ -99,12 +100,12 @@ class CI_PingMeLive {
         exec($curlRequest);
         return true;
     }
-    public function simpleEvent($groupTitle, $messageText)
+public function simpleEvent($groupTitle, $messageText)
     {
         $this->sendData($groupTitle, $messageText);
         return true;
     }
-    public function startErrorPings()
+public function startErrorPings()
     {
         set_error_handler(function($errno, $errstr, $errfile, $errline)
         {
@@ -121,7 +122,7 @@ class CI_PingMeLive {
         });
         return true;
     }
-    public function detailedEvent($groupTitle, $messageText, $detailedText)
+public function detailedEvent($groupTitle, $messageText, $detailedText)
     {
         $this->sendData($groupTitle, $messageText, $detailedText);
         return true;
