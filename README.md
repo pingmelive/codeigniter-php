@@ -45,9 +45,9 @@ For disabling, comment this lines in `{BASEROOT}/system/core/CodeIgniter.php`
 
 ```php
 <?php 
-//  set_error_handler('_error_handler');
-//	 set_exception_handler('_exception_handler');
-//	 register_shutdown_function('_shutdown_handler');
+// set_error_handler('_error_handler');
+// set_exception_handler('_exception_handler');
+// register_shutdown_function('_shutdown_handler');
  ?>
  ```
 ...and you are done!
