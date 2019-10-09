@@ -34,7 +34,7 @@ $autoload['libraries'] = array('pingmelive');
 // Copy the code below and simply paste in the constant.php 
 $pingmeliveConf = array("apiKey" =>"Your API KEY","projectID" =>"PROJECT ID","errorLogStatus"=>true,"errorTitle"=>"CodeIgnitor PHP Error");
 
-defined('PingMeLiveConfig') OR define('PingMeLiveConfig', $pingmeliveConf);
+defined('PingMeLiveConfig') OR define('PingMeLiveConfig', json_encode($pingmeliveConf));
 
 ?>
 ```
