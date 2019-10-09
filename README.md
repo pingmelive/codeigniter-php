@@ -38,7 +38,8 @@ defined('PingMeLiveConfig') OR define('PingMeLiveConfig', json_encode($pingmeliv
 
 ?>
 ```
-**Note** `To enable PingMelive Error Logging , you have to disable the Codeigniter Error Logging Handlers.`
+## ** To enable PingMelive Error Logging , you have to disable the Default Codeigniter Error Logging Handlers.
+
 
 For disabling, comment this lines in `{BASEROOT}/system/core/CodeIgniter.php`
 
