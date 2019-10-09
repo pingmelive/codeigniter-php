@@ -1,18 +1,15 @@
 <?php
-/**
- * CodeIgniter PingMeLive Class
- *
- * 	This is a library which helps you to get LIVE notifications of actions taking place on your webistes and applications.
-	Just Copy past the below codes and get live updates of errors and actions. Make Categories of pings based on projects (etc) and assign it to your team mates.
-	That's what PingMeLive does.
-	Easy right!.
- *
- * @package		PingMeLive-CodeIgniter Integration
- * @subpackage		Libraries
- * @category		Libraries
- * @author		PingMeLive Team
- * @link		https://pingmelive.com/
- * @lastModified	08-OCT, 2019 2:05 PM
+/*
+ 	* CodeIgniter PingMeLive Class
+ 	*
+	*This is a library which helps you to get LIVE notifications of actions taking place on your webistes and applications.Just Copy past the below codes and get live updates of errors and actions. Make Categories of pings based on projects (etc) and assign it to your team mates.That's what PingMeLive does.Easy right!.
+ 	*
+	 * @package		PingMeLive-CodeIgniter Integration
+	 * @subpackage		Libraries
+	 * @category		Libraries
+	 * @author		PingMeLive Team
+	 * @link		https://pingmelive.com/
+	 * @lastModified	08-OCT, 2019 2:05 PM
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
